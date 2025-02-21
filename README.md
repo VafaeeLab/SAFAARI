@@ -27,12 +27,12 @@ pip install -e .
 ##  Running SAFAARI
 You can run SAFAARI using the command-line interface (CLI):
 
-### 1 **Supervised Integration**
+### **Supervised Integration**
 ```bash
 safaari-supervised_integration
 ```
 
-### 2️ **Unsupervised Annotation & Integration in open set OR closed set Setting**
+### **Unsupervised Annotation & Integration in open set OR closed set Setting**
 closed set mode:
 ```bash
 safaari-unsupervised --open_set False
@@ -52,7 +52,7 @@ You can download the required datasets from the following link:
 **[Dataset Download](https://doi.org/10.6084/m9.figshare.c.7502103.v1)**  
 
 After downloading, you need to **modify** `main_integration.py` and uncomment the relevant dataset section to run the integration process.
-### 3️ **Custom Configuration**
+### **Custom Configuration**
 You can specify additional parameters:
 ```bash
 safaari-unsupervised --open_set True --epochs 500 --batch_size 512 --cuda 0
