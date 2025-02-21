@@ -10,9 +10,9 @@ SAFAARI is a **Single-cell Annotation and Fusion with Adversarial Open-Set Domai
 ##  Features
 - **Open-Set & Closed-Set Adaptation**: Handles novel cell types in the target dataset.
 - **Batch Effect Removal**: Uses adversarial learning to mitigate batch effects.
-- **Cross-Modality Integration**: Works across different sequencing technologies (e.g., FACS & 10X Genomics).
 - **Class Imbalance Handling**: Uses **SMOTE oversampling** to balance training data.
 - **Novel Cell Type Detection**: Identifies unknown cell types in new datasets.
+- **Cross-Modality/Cross-species Integration**
 
 ##  Installation
 To install SAFAARI, run the following commands:
@@ -22,8 +22,6 @@ git clone https://github.com/VafaeeLab/SAFAARI.git
 cd SAFAARI
 pip install -e .
 ```
-
-python setup.py sdist bdist_wheel
 
 
 ##  Running SAFAARI
@@ -118,9 +116,6 @@ If you use SAFAARI in your research, please cite:
 }
 ```
 You can also find the preprint at: https://doi.org/10.1101/2024.10.04.616599.
-
-##  Contact
-For questions or contributions, please reach out to **VafaeeLab**  or open an issue on GitHub!
 
 
 ---
