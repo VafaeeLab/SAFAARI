@@ -1,0 +1,17 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+SAFAARI.egg-info/PKG-INFO
+SAFAARI.egg-info/SOURCES.txt
+SAFAARI.egg-info/dependency_links.txt
+SAFAARI.egg-info/entry_points.txt
+SAFAARI.egg-info/requires.txt
+SAFAARI.egg-info/top_level.txt
+models/SAFAARI.py
+models/__init__.py
+models/losses.py
+scripts/__init__.py
+scripts/main_integration.py
+scripts/run_SAFAARI.py
+scripts/utils.py

@@ -1,61 +1,73 @@
-spleen:
+# **Tabula Muris Dataset: Cell Type Classes**
 
-Class 0: T cell
-Class 1: B cell
-Class 2: dendritic cell
+This document provides a list of cell type classes for each tissue in the **Tabula Muris** dataset.
 
+## **Spleen**
+| Class ID | Cell Type       |
+|----------|---------------|
+| 0        | T cell        |
+| 1        | B cell        |
+| 2        | Dendritic cell |
 
-bladder:
+## **Bladder**
+| Class ID | Cell Type         |
+|----------|------------------|
+| 0        | Bladder cell     |
+| 1        | Mesenchymal cell |
+| 2        | Leukocyte       |
 
-Class 0: bladder cell
-Class 1: mesenchymal cell
-Class 2: leukocyte
+## **Mammary Gland**
+| Class ID | Cell Type        |
+|----------|----------------|
+| 0        | Endothelial cell |
+| 1        | Stromal cell     |
+| 2        | Basal cell       |
+| 3        | Macrophage       |
 
+## **Kidney**
+| Class ID | Cell Type                   |
+|----------|----------------------------|
+| 0        | Endothelial cell           |
+| 1        | Kidney tubule cell         |
+| 2        | Fenestrated cell           |
+| 3        | Fibroblast                 |
+| 4        | Kidney collecting duct cell |
+| 5        | Leukocyte                  |
 
-mammary:
+## **Bone Marrow**
+| Class ID | Cell Type                     |
+|----------|------------------------------|
+| 0        | Granulocyte                  |
+| 1        | T cell                       |
+| 2        | Fraction A pre-pro B cell    |
+| 3        | Monocyte                     |
+| 4        | Hematopoietic stem cell      |
+| 5        | B cell                        |
+| 6        | Erythrocyte                   |
 
-Class 0: endothelial cell
-Class 1: stromal cell
-Class 2: basal cell
-Class 3: macrophage
+## **Heart**
+| Class ID | Cell Type            |
+|----------|---------------------|
+| 0        | Endocardial cell     |
+| 1        | Fibroblast          |
+| 2        | Cardiac muscle cell |
+| 3        | Endothelial cell    |
+| 4        | Erythrocyte         |
+| 5        | Smooth muscle cell  |
 
-kidney:
+## **Muscle**
+| Class ID | Cell Type                          |
+|----------|-----------------------------------|
+| 0        | B cell                           |
+| 1        | T cell                           |
+| 2        | Endothelial cell                 |
+| 3        | Skeletal muscle satellite cell   |
+| 4        | Mesenchymal stem cell            |
+| 5        | Macrophage                       |
+| 6        | Chondroblast                     |
 
-Class 0: endothelial cell
-Class 1: kidney tubule cell
-Class 2: fenestrated cell
-Class 3: fibroblast
-Class 4: kidney collecting duct cell
-Class 5: leukocyte
-
-
-marrow:
-
-Class 0: granulocyte
-Class 1: T cell
-Class 2: Fraction A pre-pro B cell
-Class 3: monocyte
-Class 4: hematopoietic stem cell
-Class 5: B cell
-Class 6: erythrocyte
-
-heart:
-
-Class 0: endocardial cell
-Class 1: fibroblast
-Class 2: cardiac muscle cell
-Class 3: endothelial cell
-Class 4: erythrocyte
-Class 5: smooth muscle cell
-
-
-muscle:
-
-Class 0: B cell
-Class 1: T cell
-Class 2: endothelial cell
-Class 3: skeletal muscle satellite cell
-Class 4: mesenchymal stem cell
-Class 5: macrophage
-Class 6: chondroblast
+---
+## **Notes**
+- These class labels correspond to **cell types** present in each tissue dataset.  
+- Each **Class ID** is used for **mapping annotations** during data processing.  
 

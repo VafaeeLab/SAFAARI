@@ -1,0 +1,3 @@
+[console_scripts]
+safaari-supervised_integration = scripts.main_integration:main
+safaari-unsupervised = scripts.run_SAFAARI:main

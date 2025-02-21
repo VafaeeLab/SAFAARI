@@ -1,0 +1,145 @@
+Metadata-Version: 2.2
+Name: SAFAARI
+Version: 0.1.0
+Summary: SAFAARI: A domain adaptation method for single-cell data annotation & integration
+Home-page: https://github.com/VafaeeLab/SAFAARI
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: torch==2.0.0
+Requires-Dist: numpy==1.24.2
+Requires-Dist: tqdm==4.65.0
+Requires-Dist: imblearn==0.0
+Requires-Dist: scikit-learn==1.2.2
+Requires-Dist: pandas==1.5.3
+Requires-Dist: matplotlib==3.7.1
+Requires-Dist: scipy==1.10.1
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# SAFAARI
+Single-cell Annotation and Fusion with Adversarial Open-Set Domain Adaptation Reliable for single-cell multi-omics Data Integration
+![Figure 1](https://github.com/user-attachments/assets/0e966206-9834-4f88-aa74-ff20b85dff54)
+# SAFAARI: Single-Cell Annotation & Fusion using Adversarial Open-Set Adaptation
+
+
+
+SAFAARI is a **Single-cell Annotation and Fusion with Adversarial Open-Set Domain Adaptation Reliable for single-cell multi-omics Data Integration**. It effectively removes batch effects, adapts to new cell types, and improves cross-modality single-cell analysis. It supports both **open-set** and **closed-set** annotation.
+
+##  Features
+- **Open-Set & Closed-Set Adaptation**: Handles novel cell types in the target dataset.
+- **Batch Effect Removal**: Uses adversarial learning to mitigate batch effects.
+- **Cross-Modality Integration**: Works across different sequencing technologies (e.g., FACS & 10X Genomics).
+- **Class Imbalance Handling**: Uses **SMOTE oversampling** to balance training data.
+- **Novel Cell Type Detection**: Identifies unknown cell types in new datasets.
+
+##  Installation
+To install SAFAARI, run the following commands:
+
+```bash
+git clone https://github.com/VafaeeLab/SAFAARI.git
+cd SAFAARI
+pip install --upgrade build setuptools wheel
+python -m build
+pip install .
+```
+
+##  Running SAFAARI
+You can run SAFAARI using the command-line interface (CLI):
+
+### 1 **Supervised Integration**
+```bash
+safaari-supervised_integration
+```
+
+### 2️ **Unsupervised Annotation & Integration in open set OR closed set Setting**
+closed set mode:
+```bash
+safaari-unsupervised --open_set False
+```
+open set mode:
+```bash
+safaari-unsupervised --open_set True
+```
+
+### 3️ **Custom Configuration**
+You can specify additional parameters:
+```bash
+safaari-unsupervised --open_set True --epochs 500 --batch_size 512 --cuda 0
+```
+
+##  Data Structure
+
+SAFAARI expects input data in **CSV format**, where:  
+- **Each row represents a single cell**  
+- **Each column represents a gene**  
+- **The first column must be labeled** `'cell types'` **and contain cell-type annotations**  
+
+### **Dataset Organization**  
+SAFAARI utilizes a subset of the **Tabula Muris** cell atlas, containing **seven tissues**:  
+- **Bladder**, **Kidney**, **Heart**, **Mammary Gland**, **Muscle**, **Bone Marrow**, **Spleen**  
+
+Data from **FACS (Fluorescence-Activated Cell Sorting)** serves as the **source domain**, while **10x Genomics** is the **target domain**. The structured datasets are stored in:
+data/FACS10X/{Tissue_name}
+Each dataset follows the **naming convention**:  
+- `dataset_source_CmnGenes.csv` (e.g., `Bladder_FACS_CmnGenes.csv`)  
+- `dataset_target_CmnGenes.csv` (e.g., `Bladder_10X_CmnGenes.csv`)  
+
+These files contain **normalized gene expression values** across **common highlu variable genes** between domains.
+
+##  Output Files
+Unsupervised results will be stored in `data/results/{Tissue_name}/`:
+- `source_embeddings.csv` (Processed source domain features)
+- `target_embeddings.csv` (Processed target domain features)
+- `FACS_to_10X_labels.csv` or `FACS_to_10X_labels_op.csv` (Open vs. Closed set labels)
+
+
+Supervised integration results will be stored in `SAFAARI_supervised_Integration_Resultsdata/{Tissue_name}/`:
+- `dataset_FACS_to_10X_embeddings_op_source.csv` (supervised source embeddings)
+- `dataset_FACS_to_10X_embeddings_op_target.csv` (supervised target embeddings)
+
+
+##  Example Run
+```bash
+safaari-unsupervised --open_set True
+```
+
+
+```bash
+safaari-supervised_integration
+```
+
+
+
+##  Citation
+
+If you use SAFAARI in your research, please cite:
+
+```bibtex
+@article{Aminzadeh2024SAFAARI,
+  author = {Fatemeh Aminzadeh, Jun Wu, Jingrui He, Morteza Saberi, Fatemeh Vafaee},
+  title = {Single-Cell Data Integration and Cell Type Annotation through Contrastive Adversarial Open-set Domain Adaptation},
+  journal = {bioRxiv},
+  year = {2024},
+  doi = {10.1101/2024.10.04.616599},
+  publisher = {Cold Spring Harbor Laboratory}
+}
+```
+You can also find the preprint at: https://doi.org/10.1101/2024.10.04.616599.
+
+##  Contact
+For questions or contributions, please reach out to **VafaeeLab**  or open an issue on GitHub!
+
+
+---
+
+###  [SAFAARI GitHub Repository](https://github.com/VafaeeLab/SAFAARI)
+
+
