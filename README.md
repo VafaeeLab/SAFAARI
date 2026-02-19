@@ -106,16 +106,17 @@ safaari-supervised_integration
 If you use SAFAARI in your research, please cite:
 
 ```bibtex
-@article{Aminzadeh2024SAFAARI,
-  author = {Fatemeh Aminzadeh, Jun Wu, Jingrui He, Morteza Saberi, Fatemeh Vafaee},
-  title = {Single-Cell Data Integration and Cell Type Annotation through Contrastive Adversarial Open-set Domain Adaptation},
-  journal = {bioRxiv},
-  year = {2024},
-  doi = {10.1101/2024.10.04.616599},
-  publisher = {Cold Spring Harbor Laboratory}
+@article{Aminzadeh2026SAFAARI,
+  author = {Fatemeh Aminzadeh and Jun Wu and Jingrui He and Morteza Saberi and Fatemeh Vafaee},
+  title = {SAFAARI: Contrastive Adversarial Open-set Domain Adaptation for Single-cell Integration \& Annotation},
+  journal = {Genomics, Proteomics \& Bioinformatics},
+  year = {2026},
+  doi = {10.1093/gpbjnl/qzag008},
+  note = {qzag008},
+  publisher = {Oxford University Press}
 }
 ```
-You can also find the preprint at: https://doi.org/10.1101/2024.10.04.616599.
+You can also find the paper at: https://doi.org/10.1093/gpbjnl/qzag008
 
 
 ---
